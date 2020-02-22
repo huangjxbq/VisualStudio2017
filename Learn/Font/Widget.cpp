@@ -82,8 +82,11 @@ void Widget::EnumFont()
 {
 	//=================================设置表格===========================================
 	ui.tableWidget->setRowCount(1200);
-	ui.tableWidget->setColumnCount(2);
-	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "FullName" << "Smooth Sizes");
+	ui.tableWidget->setColumnCount(18);
+	ui.tableWidget->setHorizontalHeaderLabels(QStringList() << "FullName" << "Style" << "Script" << "FontType"
+	<< "Height" << "Width" << "Escapement" << "Orientation" << "Weight"
+	<< "Italic" << "Underline" << "StrikeOut" << "CharSet" << "OutPrecision"
+	<< "ClipPrecision" << "Quality" << "PitchAndFamily" << "FaceName");
 	//
 	//QTableWidgetItem *child = new QTableWidgetItem;
 	//child->setText(/*QString::fromWCharArray(cast_lpelfe->elfFullName)*/"xx");
@@ -95,38 +98,95 @@ void Widget::EnumFont()
 
 	LOGFONT logfont;
 	logfont.lfCharSet = DEFAULT_CHARSET;
-	logfont.lfFaceName[0] = '\0';
+	logfont.lfCharSet = GB2312_CHARSET;
+	logfont.lfCharSet = CHINESEBIG5_CHARSET;
+	
+	logfont.lfFaceName[0] = 0;
+	logfont.lfFaceName[1] = '体';
+	logfont.lfFaceName[2] = '\0';
 	logfont.lfPitchAndFamily = 0;
-
+	
 	EnumFontFamiliesEx(dc, &logfont, CallBackEnumFontFamExProc, (LPARAM)ui.tableWidget, 0);
 	
-	qDebug() <<  "count:" << m_count;
-
-
-
+	qDebug() << "count:" << m_count;
 }
 
 int Widget::CallBackEnumFontFamExProc(const LOGFONT * lpelfe, const TEXTMETRIC * lpntme, DWORD FontType, LPARAM lParam)
 {
 	//ENUMLOGFONTEXDV > ENUMLOGFONTEX > LOGFONT
-	const ENUMLOGFONTEX * cast_lpelfe = ((const ENUMLOGFONTEX *)lpelfe);
+	const ENUMLOGFONTEX *cast_lpelfe = ((const ENUMLOGFONTEX *)lpelfe);
+		
+#ifdef UNICODE
+	QString fullname = QString::fromWCharArray(cast_lpelfe->elfFullName);
+	QString style    = QString::fromWCharArray(cast_lpelfe->elfStyle);
+	QString script   = QString::fromWCharArray(cast_lpelfe->elfScript);
+#else
+	QString fullname = QString::fromLocal8Bit((const char *)cast_lpelfe->elfFullName);  
+	QString style    = QString::fromLocal8Bit((const char *)cast_lpelfe->elfStyle);
+	QString script   = QString::fromLocal8Bit((const char *)cast_lpelfe->elfScript);
+#endif // UNICODE
 
 	QTableWidget *table = (QTableWidget *)lParam;
 
 	//FullName
-	QTableWidgetItem *child = new QTableWidgetItem;
+	QTableWidgetItem *child_fullname = new QTableWidgetItem;
+	child_fullname->setText(fullname);
+	table->setItem(m_count, 0, child_fullname);
 
-#ifdef UNICODE
-	child->setText(QString::fromWCharArray(cast_lpelfe->elfFullName));
-#else
-	child->setText(QString::fromLocal8Bit(cast_lpelfe->elfFullName));
-#endif // UNICODE
+	//Style
+	QTableWidgetItem *child_style = new QTableWidgetItem;
+	child_style->setText(style);
+	table->setItem(m_count, 1, child_style);
 
-	table->setItem(m_count, 0, child);
+	//Script
+	QTableWidgetItem *child_script = new QTableWidgetItem;
+	child_script->setText(script);
+	table->setItem(m_count, 2, child_script);
+
+	//FontType
+	QString string_font_type;
+	switch (FontType)
+	{
+	case RASTER_FONTTYPE:
+		string_font_type = "Raster";
+		break;
+	case DEVICE_FONTTYPE:
+		string_font_type = "Device";
+		break;
+	case TRUETYPE_FONTTYPE:
+		string_font_type = "TrueType";
+		break;
+	default:
+		string_font_type = "Unknown";
+		break;
+	}
+
+	QTableWidgetItem *child_fonttype = new QTableWidgetItem;
+	child_fonttype->setText(string_font_type);
+	table->setItem(m_count, 3, child_fonttype);
 
 
+	//LOGFONT的字段
+	QTableWidgetItem *child_height = new QTableWidgetItem;
+	child_height->setText(QString::number(lpelfe->lfWeight));
+	table->setItem(m_count, 4, child_height);
+
+	QTableWidgetItem *child_width = new QTableWidgetItem;
+	child_width->setText(QString::number(lpelfe->lfWidth));
+	table->setItem(m_count, 5, child_width);
+
+	QTableWidgetItem *child_escapement = new QTableWidgetItem;
+	child_escapement->setText(QString::number(lpelfe->lfEscapement));
+	table->setItem(m_count, 6, child_escapement);
+
+	QTableWidgetItem *child_orientation = new QTableWidgetItem;
+	child_orientation->setText(QString::number(lpelfe->lfOrientation));
+	table->setItem(m_count, 7, child_orientation);
 
 
+	QTableWidgetItem *child_facename = new QTableWidgetItem;
+	child_facename->setText(QString::fromWCharArray(lpelfe->lfFaceName));
+	table->setItem(m_count, 17, child_facename);
 
 
 	m_count++;

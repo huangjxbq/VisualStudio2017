@@ -23,6 +23,4 @@ private:
 
 
 	Ui::WidgetClass ui;
-
-	
 };
