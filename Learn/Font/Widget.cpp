@@ -11,6 +11,37 @@ Widget::Widget(QWidget *parent)
 {
 	ui.setupUi(this);
 
+	QFontDatabase database;
+	ui.treeWidget->setColumnCount(2);
+	ui.treeWidget->setHeaderLabels(QStringList() << "Font" << "Smooth Sizes");
+
+	const QStringList fontFamilies = database.families();
+
+	for (const QString &family : fontFamilies) 
+	{
+		QTreeWidgetItem *familyItem = new QTreeWidgetItem(ui.treeWidget);
+		familyItem->setText(0, family);
+
+		const QStringList fontStyles = database.styles(family);
+		for (const QString &style : fontStyles) 
+		{
+			QTreeWidgetItem *styleItem = new QTreeWidgetItem(familyItem);
+			styleItem->setText(0, style);
+
+			QString sizes;
+			const QList<int> smoothSizes = database.smoothSizes(family, style);
+			for (int points : smoothSizes)
+			{
+				sizes += QString::number(points) + ' ';
+			}
+			styleItem->setText(1, sizes.trimmed());
+
+
+
+
+		}
+	}
+
 	EnumFont();
 
 	QFont font;
