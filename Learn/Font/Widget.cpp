@@ -98,7 +98,7 @@ Widget::~Widget()
 {
 }
 
-void Widget::on_pushButton_Browse_Qt_clicked()
+void Widget::on_pushButton_Install_Qt_clicked()
 {
 	QFileDialog filedialog;
 	filedialog.setLabelText(QFileDialog::Accept, u8"安装");
@@ -106,15 +106,22 @@ void Widget::on_pushButton_Browse_Qt_clicked()
 	filedialog.setFileMode(QFileDialog::ExistingFiles); //设置多选
 	if (QFileDialog::Accepted == filedialog.exec())
 	{
-		QStringList files = filedialog.selectedFiles();
+		//安装
+		InstallFontUseQt(filedialog.selectedFiles());
 
-		qDebug() << files;
+		//更新界面
+		updateListWidget();
 	}
 }
 
-void Widget::on_pushButton_Install_Qt_clicked()
+void Widget::updateListWidget()
 {
-
+	//auto it = m_InstalledFontFile.begin();
+	for (auto it = m_InstalledFontFile.begin(); it != m_InstalledFontFile.end(); ++it)
+	{
+		QListWidgetItem *item = new QListWidgetItem(it.key(), ui.listWidget);
+		ui.listWidget->create
+	}
 }
 
 void Widget::EnumFontUseQt()
@@ -222,10 +229,13 @@ void Widget::InstallFontUseQt(const QStringList &files)
 {
 	for (const QString &file : files)
 	{
-		int id = QFontDatabase::addApplicationFont(file);
-		if (-1 != id)
+		if (!m_InstalledFontFile.contains(file))
 		{
-			m_InstalledFontFile.insert(file, id);
+			int id = QFontDatabase::addApplicationFont(file);
+			if (-1 != id)
+			{
+				m_InstalledFontFile.insert(file, id);
+			}
 		}
 	}
 }

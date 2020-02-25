@@ -16,13 +16,20 @@ public:
 
 private slots:
 	//Qt安装卸载字体
-	void on_pushButton_Browse_Qt_clicked();  //选择文件
-
 	void on_pushButton_Install_Qt_clicked();  //安装字体
 
 
 
 private:
+	//Qt 
+	void updateListWidget();   //更新列表
+
+
+
+
+	//Windows SDK
+
+
 	void EnumFontUseQt();    //Qt枚举字体
 
 	void InstallFontUseQt(const QStringList &files);  //Qt安装字体
