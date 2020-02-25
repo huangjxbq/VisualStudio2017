@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gui", "Gui", "{817A3347-5F6
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Font", "Font\Font.vcxproj", "{10CEFC7F-C0E1-44E6-B6ED-597A05CDC6BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cursor", "Cursor\Cursor.vcxproj", "{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -35,6 +37,12 @@ Global
 		{10CEFC7F-C0E1-44E6-B6ED-597A05CDC6BA}.Release|x64.ActiveCfg = Release|x64
 		{10CEFC7F-C0E1-44E6-B6ED-597A05CDC6BA}.Release|x64.Build.0 = Release|x64
 		{10CEFC7F-C0E1-44E6-B6ED-597A05CDC6BA}.Release|x86.ActiveCfg = Release|x64
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}.Debug|x64.ActiveCfg = Debug|x64
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}.Debug|x64.Build.0 = Debug|x64
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}.Debug|x86.ActiveCfg = Debug|x64
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}.Release|x64.ActiveCfg = Release|x64
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}.Release|x64.Build.0 = Release|x64
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,9 +51,10 @@ Global
 		{C0F9688F-EAFD-4AED-AFC6-29DB26CB44F4} = {DF22A6BD-1472-4114-9CE0-AA63F36C33EA}
 		{817A3347-5F6C-4815-B483-7A6EE3B79786} = {EE87C0F5-59A7-40EC-A874-FA0F3F29D9A9}
 		{10CEFC7F-C0E1-44E6-B6ED-597A05CDC6BA} = {817A3347-5F6C-4815-B483-7A6EE3B79786}
+		{6A0D80A7-6067-4221-A0B0-13FDCC6C5586} = {817A3347-5F6C-4815-B483-7A6EE3B79786}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		Qt5Version = $(DefaultQtVersion)
 		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
+		Qt5Version = $(DefaultQtVersion)
 	EndGlobalSection
 EndGlobal
