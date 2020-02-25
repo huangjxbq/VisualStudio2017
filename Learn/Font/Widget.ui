@@ -13,28 +13,101 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QLabel" name="label">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(85, 255, 255);</string>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Qt</string>
      </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10">
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>安装字体</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>字体文件</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_FontFile_Qt"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Browse_Qt">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Install_Qt">
+             <property name="text">
+              <string>安装</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QListWidget" name="listWidget"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="title">
+         <string>枚举字体</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QTreeWidget" name="treeWidget">
+           <column>
+            <property name="text">
+             <string notr="true">1</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
-    <widget class="QTreeWidget" name="treeWidget">
-     <column>
-      <property name="text">
-       <string notr="true">1</string>
-      </property>
-     </column>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Windows SDK</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10">
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="title">
+         <string>安装字体</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="title">
+         <string>枚举字体</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="tableWidget"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
     </widget>
-   </item>
-   <item>
-    <widget class="QTableWidget" name="tableWidget"/>
    </item>
   </layout>
  </widget>
