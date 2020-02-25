@@ -3,6 +3,7 @@
 #include <QFontMetrics>
 #include <QFontDatabase>
 #include <QDebug>
+#include <QFileDialog>
 
 int m_count = 0;
 
@@ -10,8 +11,23 @@ Widget::Widget(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+	this->showMaximized();
 
-	EnumFont();
+	ui.treeWidget->setColumnCount(10);
+	ui.treeWidget->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
+	ui.treeWidget->setHeaderLabels(QStringList() << "Font" << "Smooth Sizes" << "Point Sizes" << 
+		"BitmapScalable" << "SmoothlyScalable" << "Scalable" << "FixedPitch" << 
+		"italic" << "bold" << "weight");
+
+	//安装字体
+	//InstallFontUseWin32();
+	//InstallFontUseQt();
+
+	//枚举字体
+	EnumFontUseQt();
+	
+
+	EnumFontUseWin32();
 
 	QFont font;
 
@@ -64,9 +80,9 @@ Widget::Widget(QWidget *parent)
 	qDebug() << fm.width(u8"你好Beijing!");
 	qDebug() << fm.width(u8" ");
 
-	ui.label->setFont(font.resolve(font));
-	ui.label->resize(fm.width(str), fm.height());
-	ui.label->setText(str);
+	//ui.label->setFont(font.resolve(font));
+	//ui.label->resize(fm.width(str), fm.height());
+	//ui.label->setText(str);
 	
 
 
@@ -78,7 +94,143 @@ Widget::Widget(QWidget *parent)
 	qDebug() << font.toString();
 }
 
-void Widget::EnumFont()
+Widget::~Widget()
+{
+}
+
+void Widget::on_pushButton_Browse_Qt_clicked()
+{
+	QFileDialog filedialog;
+	filedialog.setLabelText(QFileDialog::Accept, u8"安装");
+	filedialog.setNameFilter(u8"字体文件 (*.ttf)");      //ttf RawTrueTypeFont
+	filedialog.setFileMode(QFileDialog::ExistingFiles); //设置多选
+	if (QFileDialog::Accepted == filedialog.exec())
+	{
+		QStringList files = filedialog.selectedFiles();
+
+		qDebug() << files;
+	}
+}
+
+void Widget::on_pushButton_Install_Qt_clicked()
+{
+
+}
+
+void Widget::EnumFontUseQt()
+{
+	//InstallFontUseQt();
+	
+
+	QFontDatabase database;
+	const QStringList fontFamilies = database.families();
+
+	for (const QString &family : fontFamilies)
+	{
+		QTreeWidgetItem *familyItem = new QTreeWidgetItem(ui.treeWidget);
+		familyItem->setText(0, family);
+
+		const QStringList fontStyles = database.styles(family);
+		for (const QString &style : fontStyles)
+		{
+			QTreeWidgetItem *styleItem = new QTreeWidgetItem(familyItem);
+			styleItem->setText(0, style);
+
+			//Smooth Sizes
+			QString str_smooth_sizes;
+			const QList<int> smoothSizes = database.smoothSizes(family, style);
+			for (int points : smoothSizes)
+			{
+				str_smooth_sizes += QString::number(points) + ' ';
+			}
+			styleItem->setText(1, str_smooth_sizes.trimmed());
+
+			//Point Sizes
+			QString str_point_sizes;
+			const QList<int> pointSizes = database.pointSizes(family, style);
+			for (int points : pointSizes)
+			{
+				str_point_sizes += QString::number(points) + ' ';
+			}
+			styleItem->setText(2, str_point_sizes.trimmed());
+
+			//BitmapScalable
+			if (database.isBitmapScalable(family, style))
+			{
+				styleItem->setText(3, "True");
+			}
+			else
+			{
+				styleItem->setText(3, "False");
+			}
+			//SmoothlyScalable
+			if (database.isSmoothlyScalable(family, style))
+			{
+				styleItem->setText(4, "True");
+			}
+			else
+			{
+				styleItem->setText(4, "False");
+			}
+
+			//Scalable
+			if (database.isScalable(family, style))
+			{
+				styleItem->setText(5, "True");
+			}
+			else
+			{
+				styleItem->setText(5, "False");
+			}
+			//FixedPitch
+			if (database.isFixedPitch(family, style))
+			{
+				styleItem->setText(6, "True");
+			}
+			else
+			{
+				styleItem->setText(6, "False");
+			}
+			//italic
+			if (database.italic(family, style))
+			{
+				styleItem->setText(7, "True");
+			}
+			else
+			{
+				styleItem->setText(7, "False");
+			}
+
+			//bold
+			if (database.bold(family, style))
+			{
+				styleItem->setText(8, "True");
+			}
+			else
+			{
+				styleItem->setText(8, "False");
+			}
+			//weight
+			styleItem->setText(9, QString::number(database.weight(family, style)));
+		}
+	}
+
+
+}
+
+void Widget::InstallFontUseQt(const QStringList &files)
+{
+	for (const QString &file : files)
+	{
+		int id = QFontDatabase::addApplicationFont(file);
+		if (-1 != id)
+		{
+			m_InstalledFontFile.insert(file, id);
+		}
+	}
+}
+
+void Widget::EnumFontUseWin32()
 {
 	//=================================设置表格===========================================
 	ui.tableWidget->setRowCount(1200);
@@ -98,18 +250,39 @@ void Widget::EnumFont()
 
 	LOGFONT logfont;
 	logfont.lfCharSet = DEFAULT_CHARSET;
-	logfont.lfCharSet = GB2312_CHARSET;
-	logfont.lfCharSet = CHINESEBIG5_CHARSET;
+	//logfont.lfCharSet = GB2312_CHARSET;
+	//logfont.lfCharSet = CHINESEBIG5_CHARSET;
 	
 	logfont.lfFaceName[0] = 0;
-	logfont.lfFaceName[1] = '体';
-	logfont.lfFaceName[2] = '\0';
+	//logfont.lfFaceName[1] = '体';
+	//logfont.lfFaceName[2] = '\0';
 	logfont.lfPitchAndFamily = 0;
 	
 	EnumFontFamiliesEx(dc, &logfont, CallBackEnumFontFamExProc, (LPARAM)ui.tableWidget, 0);
 	
 	qDebug() << "count:" << m_count;
 }
+
+void Widget::InstallFontUseWin32()
+{
+	//第一种
+	m_win_font_1 = AddFontResource(TEXT("C:\\Users\\lenovo\\Desktop\\方正黑体简体.ttf"));
+	m_win_font_2 = AddFontResource(TEXT("C:\\Users\\lenovo\\Desktop\\华文细黑.ttf"));
+	m_win_font_3 = AddFontResource(TEXT("C:\\Users\\lenovo\\Desktop\\OCR-B 10 BT.ttf"));
+	SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0);
+	
+}
+
+void Widget::RemoveFontUseWin32()
+{
+	BOOL res1 = RemoveFontResource(TEXT("C:\\Users\\lenovo\\Desktop\\方正黑体简体.ttf"));
+	//SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0);
+	BOOL res2 = RemoveFontResource(TEXT("C:\\Users\\lenovo\\Desktop\\华文细黑.ttf"));
+	//SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0);
+	BOOL res3 = RemoveFontResource(TEXT("C:\\Users\\lenovo\\Desktop\\OCR-B 10 BT.ttf"));
+	SendMessage(HWND_BROADCAST, WM_FONTCHANGE, 0, 0);
+}
+
 
 int Widget::CallBackEnumFontFamExProc(const LOGFONT * lpelfe, const TEXTMETRIC * lpntme, DWORD FontType, LPARAM lParam)
 {
