@@ -19,7 +19,7 @@
      <property name="title">
       <string>Qt</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,3">
       <item>
        <widget class="QGroupBox" name="groupBox_3">
         <property name="title">
@@ -51,7 +51,7 @@
           </layout>
          </item>
          <item>
-          <widget class="QListWidget" name="listWidget"/>
+          <widget class="QTableWidget" name="tableWidget_install_qt"/>
          </item>
         </layout>
        </widget>
@@ -61,8 +61,8 @@
         <property name="title">
          <string>枚举字体</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout">
-         <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout" rowstretch="1,16">
+         <item row="1" column="0">
           <widget class="QTreeWidget" name="treeWidget">
            <column>
             <property name="text">
@@ -70,6 +70,33 @@
             </property>
            </column>
           </widget>
+         </item>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,9,1">
+           <item>
+            <widget class="QComboBox" name="comboBox_writingSystem"/>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_enum_qt">
+             <property name="text">
+              <string>枚举</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
         </layout>
        </widget>
@@ -82,7 +109,7 @@
      <property name="title">
       <string>Windows SDK</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10">
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,3">
       <item>
        <widget class="QGroupBox" name="groupBox_4">
         <property name="title">
@@ -106,6 +133,11 @@
     </widget>
    </item>
   </layout>
+  <action name="action_uninstall_qt">
+   <property name="text">
+    <string>卸载</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

@@ -4,6 +4,7 @@
 #include <QFontDatabase>
 #include <QDebug>
 #include <QFileDialog>
+#include <QMenu>
 
 int m_count = 0;
 
@@ -13,21 +14,44 @@ Widget::Widget(QWidget *parent)
 	ui.setupUi(this);
 	this->showMaximized();
 
+	//Qt 界面设置
+	ui.tableWidget_install_qt->setColumnCount(2);
+	ui.tableWidget_install_qt->setHorizontalHeaderLabels(QStringList() << "FileName" << "Number");
+	ui.tableWidget_install_qt->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
+	ui.tableWidget_install_qt->setContextMenuPolicy(Qt::CustomContextMenu);
+	ui.tableWidget_install_qt->setSelectionBehavior(QAbstractItemView::SelectRows);//设置选中模式为选中行
+
+
+	m_pUninstallMenuQt = new QMenu(ui.tableWidget_install_qt);
+	m_pUninstallMenuQt->addAction(ui.action_uninstall_qt);
+
+	for (size_t i = 0; i < QFontDatabase::WritingSystemsCount; i++)
+	{
+		QString str = QFontDatabase::writingSystemName((QFontDatabase::WritingSystem)i) + "(" +
+			QFontDatabase::writingSystemSample((QFontDatabase::WritingSystem)i) + ")";
+
+		ui.comboBox_writingSystem->addItem(str, i);
+	}
+
 	ui.treeWidget->setColumnCount(10);
 	ui.treeWidget->header()->setSectionResizeMode(QHeaderView::ResizeToContents);
-	ui.treeWidget->setHeaderLabels(QStringList() << "Font" << "Smooth Sizes" << "Point Sizes" << 
-		"BitmapScalable" << "SmoothlyScalable" << "Scalable" << "FixedPitch" << 
+	ui.treeWidget->setHeaderLabels(QStringList() << "Font" << "Smooth Sizes" << "Point Sizes" <<
+		"BitmapScalable" << "SmoothlyScalable" << "Scalable" << "FixedPitch" <<
 		"italic" << "bold" << "weight");
+	
+	
+	//Windows SDK 界面设置
+
 
 	//安装字体
 	//InstallFontUseWin32();
 	//InstallFontUseQt();
 
 	//枚举字体
-	EnumFontUseQt();
+	//EnumFontUseQt();
 	
 
-	EnumFontUseWin32();
+	//EnumFontUseWin32();
 
 	QFont font;
 
@@ -114,28 +138,87 @@ void Widget::on_pushButton_Install_Qt_clicked()
 	}
 }
 
+void Widget::on_tableWidget_install_qt_customContextMenuRequested(const QPoint &pos)
+{
+	//显示右键菜单
+	m_pUninstallMenuQt->exec(QCursor::pos());
+}
+
+void Widget::on_action_uninstall_qt_triggered()
+{
+	QList<QTableWidgetItem *> item_list = ui.tableWidget_install_qt->selectedItems();
+
+	for (size_t i = 0; i < item_list.size(); i += 2)
+	{
+		QTableWidgetItem *file_item = item_list[i];
+		QTableWidgetItem *id_item = item_list[i + 1];
+
+		if (QFontDatabase::removeApplicationFont(id_item->text().toInt()))
+		{
+			m_InstalledFontFile.remove(file_item->text());
+			ui.tableWidget_install_qt->removeRow(file_item->row());
+		}
+	}
+}
+
+void Widget::on_pushButton_enum_qt_clicked()
+{
+	EnumFontUseQt();
+}
+
+void Widget::InstallFontUseQt(const QStringList &files)
+{
+	for (const QString &file : files)
+	{
+		if (!m_InstalledFontFile.contains(file))
+		{
+			int id = QFontDatabase::addApplicationFont(file);
+			if (-1 != id)
+			{
+				m_InstalledFontFile.insert(file, id);
+			}
+		}
+	}
+}
+
 void Widget::updateListWidget()
 {
-	//auto it = m_InstalledFontFile.begin();
-	for (auto it = m_InstalledFontFile.begin(); it != m_InstalledFontFile.end(); ++it)
+	ui.tableWidget_install_qt->clear();
+	ui.tableWidget_install_qt->setRowCount(m_InstalledFontFile.size());
+	ui.tableWidget_install_qt->setHorizontalHeaderLabels(QStringList() << "FileName" << "Number");
+
+	int i = 0;
+	for (auto it = m_InstalledFontFile.begin(); it != m_InstalledFontFile.end(); ++it, ++i)
 	{
-		QListWidgetItem *item = new QListWidgetItem(it.key(), ui.listWidget);
-		ui.listWidget->create
+		QTableWidgetItem *child_file = new QTableWidgetItem;
+		child_file->setText(it.key());
+		ui.tableWidget_install_qt->setItem(i, 0, child_file);
+
+		QTableWidgetItem *child_number = new QTableWidgetItem;
+		child_number->setText(QString::number(it.value()));
+		ui.tableWidget_install_qt->setItem(i, 1, child_number);
 	}
 }
 
 void Widget::EnumFontUseQt()
 {
-	//InstallFontUseQt();
-	
+	ui.treeWidget->clear();
 
 	QFontDatabase database;
-	const QStringList fontFamilies = database.families();
+	const QStringList fontFamilies = database.families((QFontDatabase::WritingSystem)ui.comboBox_writingSystem->currentData().toInt());
 
 	for (const QString &family : fontFamilies)
 	{
 		QTreeWidgetItem *familyItem = new QTreeWidgetItem(ui.treeWidget);
-		familyItem->setText(0, family);
+
+		if (database.isPrivateFamily(family))
+		{
+			familyItem->setText(0, family + u8"(私有)");
+		}
+		else
+		{
+			familyItem->setText(0, family);
+		}
 
 		const QStringList fontStyles = database.styles(family);
 		for (const QString &style : fontStyles)
@@ -221,24 +304,9 @@ void Widget::EnumFontUseQt()
 			styleItem->setText(9, QString::number(database.weight(family, style)));
 		}
 	}
-
-
 }
 
-void Widget::InstallFontUseQt(const QStringList &files)
-{
-	for (const QString &file : files)
-	{
-		if (!m_InstalledFontFile.contains(file))
-		{
-			int id = QFontDatabase::addApplicationFont(file);
-			if (-1 != id)
-			{
-				m_InstalledFontFile.insert(file, id);
-			}
-		}
-	}
-}
+
 
 void Widget::EnumFontUseWin32()
 {
