@@ -41,11 +41,16 @@ private slots:
 
 
 // Windows SDK
+	//限制光标区域
 	void on_pushButton_clipCursor_clicked();
 	void on_pushButton_cancleClipCursor_clicked();
 
+	//显隐
 	void on_pushButton_show_clicked();
 	void on_pushButton_hide_clicked();
+
+	//设置系统预定义光标
+	void on_comboBox_cursor_currentIndexChanged(int index);
 
 
 private:

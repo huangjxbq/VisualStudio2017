@@ -251,7 +251,7 @@
      <property name="title">
       <string>Windows SDK</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="4,1,15">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
@@ -312,6 +312,18 @@
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="title">
+         <string>设置系统预定义光标</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QComboBox" name="comboBox_cursor"/>
+         </item>
+        </layout>
+       </widget>
       </item>
       <item>
        <spacer name="verticalSpacer_2">

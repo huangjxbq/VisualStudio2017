@@ -1,6 +1,7 @@
 #include "Widget.h"
 #include <QCursor>
 #include <QDebug>
+#include <QMessageBox>
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -9,9 +10,30 @@ Widget::Widget(QWidget *parent)
 
 	ui.label_count->setAlignment(Qt::AlignCenter);
 
+	
+
+
+	//ui.comboBox_cursor->addItem(tr("Standard arrow and small hourglass"),						QString::fromWCharArray(IDC_APPSTARTING));
+	//ui.comboBox_cursor->addItem(tr("Standard arrow"),											(qint64)IDC_ARROW);
+	//ui.comboBox_cursor->addItem(tr("Crosshair"),												(qint64)IDC_CROSS);
+	//ui.comboBox_cursor->addItem(tr("Hand"),														(qint64)IDC_HAND);
+	//ui.comboBox_cursor->addItem(tr("Arrow and question mark"),									(qint64)IDC_HELP);
+	//ui.comboBox_cursor->addItem(tr("Obsolete"),													(qint64)IDC_ICON);
+	//ui.comboBox_cursor->addItem(tr("Slashed circle"),											(qint64)IDC_NO);
+	//ui.comboBox_cursor->addItem(tr("Obsolete; use IDC_SIZEALL"),								(qint64)IDC_SIZE);
+	//ui.comboBox_cursor->addItem(tr("Four-pointed arrow pointing north, south, east, and west"), (qint64)IDC_SIZEALL);
+	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing northeast and southwest"),	(qint64)IDC_SIZENESW);
+	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing north and south"),			(qint64)IDC_SIZENS);
+	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing northwest and southeast"),	(qint64)IDC_SIZENWSE);
+	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing west and east"),				(qint64)IDC_SIZEWE);
+	//ui.comboBox_cursor->addItem(tr("Vertical arrow"),											(qint64)IDC_UPARROW);
+	//ui.comboBox_cursor->addItem(tr("Hourglass"), QString::fromWCharArray(IDC_WAIT));
+
+
+
+
 	m_hWnd = (HWND)winId();
 	GetClipCursor(&m_OldClipRect);
-
 }
 
 void Widget::on_pushButton_ArrowCursor_clicked()
@@ -186,4 +208,24 @@ void Widget::on_pushButton_hide_clicked()
 {
 	m_Count = ShowCursor(FALSE);
 	ui.label_count->setText(QString::number(m_Count));
+}
+
+void Widget::on_comboBox_cursor_currentIndexChanged(int index)
+{
+#ifdef UNICODE
+	wchar_t str[128] = { 0 };
+	ui.comboBox_cursor->currentData().toString().toWCharArray(str);
+#else
+
+
+#endif // UNICODE
+
+
+	 
+	HCURSOR cursor = LoadCursor(NULL, str);
+	if (NULL == cursor)
+	{
+		QMessageBox::critical(this, tr("error"), tr("critical"));
+	}
+	SetCursor(cursor);
 }
