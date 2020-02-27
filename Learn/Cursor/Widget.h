@@ -2,6 +2,7 @@
 
 #include <QtWidgets/QWidget>
 #include "ui_Widget.h"
+#include <Windows.h>
 
 class Widget : public QWidget
 {
@@ -38,6 +39,24 @@ private slots:
 	void on_pushButton_BitmapCursor_clicked();
 	void on_pushButton_CustomCursor_clicked();
 
+
+// Windows SDK
+	void on_pushButton_clipCursor_clicked();
+	void on_pushButton_cancleClipCursor_clicked();
+
+	void on_pushButton_show_clicked();
+	void on_pushButton_hide_clicked();
+
+
 private:
 	Ui::WidgetClass ui;
+
+
+	HWND m_hWnd;
+
+
+	RECT m_OldClipRect;
+	RECT m_NewClipRect;
+
+	int m_Count;
 };

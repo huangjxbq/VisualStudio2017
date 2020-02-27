@@ -6,195 +6,328 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1221</width>
-    <height>701</height>
+    <width>859</width>
+    <height>606</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="1" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="2" column="1">
-      <widget class="QPushButton" name="pushButton_SplitVCursor">
-       <property name="text">
-        <string>SplitVCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_SizeHorCursor">
-       <property name="text">
-        <string>SizeHorCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QPushButton" name="pushButton_SizeFDiagCursor">
-       <property name="text">
-        <string>SizeFDiagCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="4">
-      <widget class="QPushButton" name="pushButton_DragCopyCursor">
-       <property name="text">
-        <string>DragCopyCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="3">
-      <widget class="QPushButton" name="pushButton_BitmapCursor">
-       <property name="text">
-        <string>BitmapCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QPushButton" name="pushButton_BusyCursor">
-       <property name="text">
-        <string>BusyCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <widget class="QPushButton" name="pushButton_IBeamCursor">
-       <property name="text">
-        <string>IBeamCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="4">
-      <widget class="QPushButton" name="pushButton_SizeAllCursor">
-       <property name="text">
-        <string>SizeAllCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="pushButton_CrossCursor">
-       <property name="text">
-        <string>CrossCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QPushButton" name="pushButton_BlankCursor">
-       <property name="text">
-        <string>BlankCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QPushButton" name="pushButton_DragLinkCursor">
-       <property name="text">
-        <string>DragLinkCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QPushButton" name="pushButton_DragMoveCursor">
-       <property name="text">
-        <string>DragMoveCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QPushButton" name="pushButton_WhatsThisCursor">
-       <property name="text">
-        <string>WhatsThisCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_UpArrowCursor">
-       <property name="text">
-        <string>UpArrowCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QPushButton" name="pushButton_SizeBDiagCursor">
-       <property name="text">
-        <string>SizeBDiagCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="pushButton_WaitCursor">
-       <property name="text">
-        <string>WaitCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_ArrowCursor">
-       <property name="text">
-        <string>ArrowCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
-      <widget class="QPushButton" name="pushButton_SplitHCursor">
-       <property name="text">
-        <string>SplitHCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="3">
-      <widget class="QPushButton" name="pushButton_PointingHandCursor">
-       <property name="text">
-        <string>PointingHandCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="4">
-      <widget class="QPushButton" name="pushButton_CustomCursor">
-       <property name="text">
-        <string>CustomCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QPushButton" name="pushButton_OpenHandCursor">
-       <property name="text">
-        <string>OpenHandCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_SizeVerCursor">
-       <property name="text">
-        <string>SizeVerCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="3">
-      <widget class="QPushButton" name="pushButton_ClosedHandCursor">
-       <property name="text">
-        <string>ClosedHandCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2">
-      <widget class="QPushButton" name="pushButton_LastCursor">
-       <property name="text">
-        <string>LastCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="4">
-      <widget class="QPushButton" name="pushButton_ForbiddenCursor">
-       <property name="text">
-        <string>ForbiddenCursor</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0" colspan="5">
-      <layout class="QHBoxLayout" name="horizontalLayout"/>
-     </item>
-    </layout>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,2">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Qt</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,1">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_pixmap">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_bitmap">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_mask">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="pushButton_WhatsThisCursor">
+          <property name="text">
+           <string>WhatsThisCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QPushButton" name="pushButton_SplitHCursor">
+          <property name="text">
+           <string>SplitHCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_SizeFDiagCursor">
+          <property name="text">
+           <string>SizeFDiagCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QPushButton" name="pushButton_LastCursor">
+          <property name="text">
+           <string>LastCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QPushButton" name="pushButton_OpenHandCursor">
+          <property name="text">
+           <string>OpenHandCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="pushButton_BusyCursor">
+          <property name="text">
+           <string>BusyCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="pushButton_DragMoveCursor">
+          <property name="text">
+           <string>DragMoveCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_CrossCursor">
+          <property name="text">
+           <string>CrossCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_UpArrowCursor">
+          <property name="text">
+           <string>UpArrowCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QPushButton" name="pushButton_CustomCursor">
+          <property name="text">
+           <string>CustomCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_ArrowCursor">
+          <property name="text">
+           <string>ArrowCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_SizeHorCursor">
+          <property name="text">
+           <string>SizeHorCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="pushButton_ClosedHandCursor">
+          <property name="text">
+           <string>ClosedHandCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <widget class="QPushButton" name="pushButton_SizeAllCursor">
+          <property name="text">
+           <string>SizeAllCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="pushButton_BitmapCursor">
+          <property name="text">
+           <string>BitmapCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QPushButton" name="pushButton_DragLinkCursor">
+          <property name="text">
+           <string>DragLinkCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pushButton_WaitCursor">
+          <property name="text">
+           <string>WaitCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QPushButton" name="pushButton_PointingHandCursor">
+          <property name="text">
+           <string>PointingHandCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="pushButton_DragCopyCursor">
+          <property name="text">
+           <string>DragCopyCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="pushButton_SplitVCursor">
+          <property name="text">
+           <string>SplitVCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_SizeVerCursor">
+          <property name="text">
+           <string>SizeVerCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="pushButton_IBeamCursor">
+          <property name="text">
+           <string>IBeamCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QPushButton" name="pushButton_ForbiddenCursor">
+          <property name="text">
+           <string>ForbiddenCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButton_BlankCursor">
+          <property name="text">
+           <string>BlankCursor</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_SizeBDiagCursor">
+          <property name="text">
+           <string>SizeBDiagCursor</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Windows SDK</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>限制光标</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QPushButton" name="pushButton_clipCursor">
+             <property name="text">
+              <string>限制光标在此窗口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_cancleClipCursor">
+             <property name="text">
+              <string>取消限制</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>显示</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QPushButton" name="pushButton_hide">
+               <property name="text">
+                <string>隐藏</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_show">
+               <property name="text">
+                <string>显示</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_count">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>
