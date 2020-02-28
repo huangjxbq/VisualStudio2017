@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>859</width>
+    <width>1103</width>
     <height>606</height>
    </rect>
   </property>
@@ -251,7 +251,7 @@
      <property name="title">
       <string>Windows SDK</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="4,1,15">
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="4,4,2,10">
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
@@ -320,7 +320,239 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
-          <widget class="QComboBox" name="comboBox_cursor"/>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_cross">
+             <property name="toolTip">
+              <string>Crosshair</string>
+             </property>
+             <property name="text">
+              <string>IDC_CROSS</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="5">
+            <widget class="QPushButton" name="pushButton_icon">
+             <property name="toolTip">
+              <string>Obsolete</string>
+             </property>
+             <property name="text">
+              <string>IDC_ICON</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pushButton_hand">
+             <property name="toolTip">
+              <string>Hand</string>
+             </property>
+             <property name="text">
+              <string>IDC_HAND</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="pushButton_help">
+             <property name="toolTip">
+              <string>Arrow and question mark</string>
+             </property>
+             <property name="text">
+              <string>IDC_HELP</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButton_sizeNesw">
+             <property name="toolTip">
+              <string>Double-pointed arrow pointing northeast and southwest</string>
+             </property>
+             <property name="text">
+              <string>IDC_SIZENESW</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_arrow">
+             <property name="toolTip">
+              <string>Standard arrow</string>
+             </property>
+             <property name="text">
+              <string>IDC_ARROW</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_appStarting">
+             <property name="toolTip">
+              <string>Standard arrow and small hourglass</string>
+             </property>
+             <property name="text">
+              <string>IDC_APPSTARTING</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_size">
+             <property name="toolTip">
+              <string>Obsolete; use IDC_SIZEALL</string>
+             </property>
+             <property name="text">
+              <string>IDC_SIZE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_no">
+             <property name="acceptDrops">
+              <bool>true</bool>
+             </property>
+             <property name="toolTip">
+              <string>Slashed circle</string>
+             </property>
+             <property name="text">
+              <string>IDC_NO</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton_sizeAll">
+             <property name="toolTip">
+              <string>Four-pointed arrow pointing north, south, east, and west</string>
+             </property>
+             <property name="text">
+              <string>IDC_SIZEALL</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="pushButton_sizeNs">
+             <property name="toolTip">
+              <string>Double-pointed arrow pointing north and south</string>
+             </property>
+             <property name="text">
+              <string>IDC_SIZENS</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="5">
+            <widget class="QPushButton" name="pushButton_sizeNwse">
+             <property name="toolTip">
+              <string>Double-pointed arrow pointing northwest and southeast</string>
+             </property>
+             <property name="text">
+              <string>IDC_SIZENWSE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButton_sizeWe">
+             <property name="toolTip">
+              <string>Double-pointed arrow pointing west and east</string>
+             </property>
+             <property name="text">
+              <string>IDC_SIZEWE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="pushButton_upArrow">
+             <property name="toolTip">
+              <string>Vertical arrow</string>
+             </property>
+             <property name="text">
+              <string>IDC_UPARROW</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="pushButton_wait">
+             <property name="toolTip">
+              <string>Hourglass</string>
+             </property>
+             <property name="text">
+              <string>IDC_WAIT</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="pushButton_ibeam">
+             <property name="text">
+              <string>IDC_IBEAM</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="pushButton_pin">
+             <property name="text">
+              <string>IDC_PIN</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="5">
+            <widget class="QPushButton" name="pushButton_person">
+             <property name="text">
+              <string>IDC_PERSON</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="title">
+         <string>设置自定义光标</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QPushButton" name="pushButton_cursor1">
+           <property name="text">
+            <string>Cursor1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_cursor2">
+           <property name="text">
+            <string>Cursor2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_cursor3">
+           <property name="text">
+            <string>Cursor3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_cursorFromFile">
+           <property name="text">
+            <string>从文件选择</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_cursor4">
+           <property name="text">
+            <string>NULL</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>

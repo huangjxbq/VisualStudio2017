@@ -2,6 +2,9 @@
 #include <QCursor>
 #include <QDebug>
 #include <QMessageBox>
+#include <QFileDialog>
+
+#include "resource.h"
 
 Widget::Widget(QWidget *parent)
 	: QWidget(parent)
@@ -10,30 +13,30 @@ Widget::Widget(QWidget *parent)
 
 	ui.label_count->setAlignment(Qt::AlignCenter);
 
+	m_hCursor = LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR1));
 	
-
-
-	//ui.comboBox_cursor->addItem(tr("Standard arrow and small hourglass"),						QString::fromWCharArray(IDC_APPSTARTING));
-	//ui.comboBox_cursor->addItem(tr("Standard arrow"),											(qint64)IDC_ARROW);
-	//ui.comboBox_cursor->addItem(tr("Crosshair"),												(qint64)IDC_CROSS);
-	//ui.comboBox_cursor->addItem(tr("Hand"),														(qint64)IDC_HAND);
-	//ui.comboBox_cursor->addItem(tr("Arrow and question mark"),									(qint64)IDC_HELP);
-	//ui.comboBox_cursor->addItem(tr("Obsolete"),													(qint64)IDC_ICON);
-	//ui.comboBox_cursor->addItem(tr("Slashed circle"),											(qint64)IDC_NO);
-	//ui.comboBox_cursor->addItem(tr("Obsolete; use IDC_SIZEALL"),								(qint64)IDC_SIZE);
-	//ui.comboBox_cursor->addItem(tr("Four-pointed arrow pointing north, south, east, and west"), (qint64)IDC_SIZEALL);
-	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing northeast and southwest"),	(qint64)IDC_SIZENESW);
-	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing north and south"),			(qint64)IDC_SIZENS);
-	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing northwest and southeast"),	(qint64)IDC_SIZENWSE);
-	//ui.comboBox_cursor->addItem(tr("Double-pointed arrow pointing west and east"),				(qint64)IDC_SIZEWE);
-	//ui.comboBox_cursor->addItem(tr("Vertical arrow"),											(qint64)IDC_UPARROW);
-	//ui.comboBox_cursor->addItem(tr("Hourglass"), QString::fromWCharArray(IDC_WAIT));
-
-
-
 
 	m_hWnd = (HWND)winId();
 	GetClipCursor(&m_OldClipRect);
+
+	
+	//SetCursor(LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR1)));
+}
+
+bool Widget::nativeEvent(const QByteArray &eventType, void *message, long *result)
+{
+	MSG *msg = (MSG*)message;
+
+	if (WM_SETCURSOR == msg->message)
+	{
+		SetCursor(m_hCursor);
+		//SetCursor(LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR1)));
+		return true;
+	}
+	else
+	{
+		return QWidget::nativeEvent(eventType, message, result);
+	}
 }
 
 void Widget::on_pushButton_ArrowCursor_clicked()
@@ -210,22 +213,124 @@ void Widget::on_pushButton_hide_clicked()
 	ui.label_count->setText(QString::number(m_Count));
 }
 
-void Widget::on_comboBox_cursor_currentIndexChanged(int index)
+void Widget::on_pushButton_appStarting_clicked()
 {
+	m_hCursor = LoadCursor(NULL, IDC_APPSTARTING);
+}
+
+void Widget::on_pushButton_arrow_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_ARROW);
+}
+
+void Widget::on_pushButton_cross_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_CROSS);
+}
+void Widget::on_pushButton_hand_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_HAND);
+}
+void Widget::on_pushButton_help_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_HELP);
+}
+void Widget::on_pushButton_ibeam_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_IBEAM);
+}
+void Widget::on_pushButton_icon_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_ICON);
+}
+void Widget::on_pushButton_no_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_NO);
+}
+void Widget::on_pushButton_person_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_PERSON);
+}
+void Widget::on_pushButton_pin_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_PIN);
+}
+void Widget::on_pushButton_size_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_SIZE);
+}
+void Widget::on_pushButton_sizeAll_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_SIZEALL);
+}
+void Widget::on_pushButton_sizeNesw_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_SIZENESW);
+}
+void Widget::on_pushButton_sizeNs_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_SIZENS);
+}
+void Widget::on_pushButton_sizeNwse_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_SIZENWSE);
+}
+void Widget::on_pushButton_sizeWe_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_SIZEWE);
+}
+void Widget::on_pushButton_upArrow_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_UPARROW);
+}
+void Widget::on_pushButton_wait_clicked()
+{
+	m_hCursor = LoadCursor(NULL, IDC_WAIT);
+	qDebug() << m_hCursor;
+}
+
+void Widget::on_pushButton_cursor1_clicked()
+{
+	m_hCursor = LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR1));
+	qDebug() << m_hCursor;
+}
+void Widget::on_pushButton_cursor2_clicked()
+{
+	m_hCursor = LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR2));
+	qDebug() << m_hCursor;
+}
+void Widget::on_pushButton_cursor3_clicked()
+{
+	m_hCursor = LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR3));
+	qDebug() << m_hCursor;
+}
+void Widget::on_pushButton_cursor4_clicked()
+{
+	m_hCursor = NULL;
+}
+
+void Widget::on_pushButton_cursorFromFile_clicked()
+{
+	QFileDialog filedialog;
+	filedialog.setLabelText(QFileDialog::Accept, u8"选择");
+	filedialog.setNameFilter(u8"光标文件 (*.cur)");      //ttf RawTrueTypeFont
+	//filedialog.setFileMode(QFileDialog::ExistingFiles); //设置多选
+	if (QFileDialog::Accepted == filedialog.exec())
+	{
+		QString filename = QDir::toNativeSeparators(filedialog.selectedFiles()[0]);
+
 #ifdef UNICODE
-	wchar_t str[128] = { 0 };
-	ui.comboBox_cursor->currentData().toString().toWCharArray(str);
+		m_hCursor = LoadCursorFromFile(filename.toStdWString().c_str());
 #else
-
-
+		m_hCursor = LoadCursorFromFile(filename.toStdString().c_str());
 #endif // UNICODE
 
+		if (NULL == m_hCursor)
+		{
+			GetLastError();
+		}
 
-	 
-	HCURSOR cursor = LoadCursor(NULL, str);
-	if (NULL == cursor)
-	{
-		QMessageBox::critical(this, tr("error"), tr("critical"));
+		qDebug() << m_hCursor;
+		
 	}
-	SetCursor(cursor);
 }

@@ -12,6 +12,11 @@ public:
 	Widget(QWidget *parent = Q_NULLPTR);
 
 
+protected:
+	virtual bool nativeEvent(const QByteArray &eventType, void *message, long *result);
+
+
+
 private slots:
 	void on_pushButton_ArrowCursor_clicked();
 	void on_pushButton_UpArrowCursor_clicked();
@@ -50,15 +55,38 @@ private slots:
 	void on_pushButton_hide_clicked();
 
 	//设置系统预定义光标
-	void on_comboBox_cursor_currentIndexChanged(int index);
+	void on_pushButton_appStarting_clicked();
+	void on_pushButton_arrow_clicked();
+	void on_pushButton_cross_clicked();
+	void on_pushButton_hand_clicked();
+	void on_pushButton_help_clicked();
+	void on_pushButton_ibeam_clicked();
+	void on_pushButton_icon_clicked();
+	void on_pushButton_no_clicked();
+	void on_pushButton_person_clicked();
+	void on_pushButton_pin_clicked();
+	void on_pushButton_size_clicked();
+	void on_pushButton_sizeAll_clicked();
+	void on_pushButton_sizeNesw_clicked();
+	void on_pushButton_sizeNs_clicked();
+	void on_pushButton_sizeNwse_clicked();
+	void on_pushButton_sizeWe_clicked();
+	void on_pushButton_upArrow_clicked();
+	void on_pushButton_wait_clicked();
 
+	//设置自定义光标
+	void on_pushButton_cursor1_clicked();
+	void on_pushButton_cursor2_clicked();
+	void on_pushButton_cursor3_clicked();
+	void on_pushButton_cursor4_clicked();
+	void on_pushButton_cursorFromFile_clicked();
 
 private:
 	Ui::WidgetClass ui;
 
 
 	HWND m_hWnd;
-
+	HCURSOR m_hCursor;
 
 	RECT m_OldClipRect;
 	RECT m_NewClipRect;
