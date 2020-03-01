@@ -3,7 +3,6 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QFileDialog>
-
 #include "resource.h"
 
 Widget::Widget(QWidget *parent)
@@ -19,7 +18,6 @@ Widget::Widget(QWidget *parent)
 	m_hWnd = (HWND)winId();
 	GetClipCursor(&m_OldClipRect);
 
-	
 	//SetCursor(LoadCursor(GetModuleHandle(NULL), MAKEINTRESOURCE(IDC_CURSOR1)));
 }
 
@@ -329,8 +327,6 @@ void Widget::on_pushButton_cursorFromFile_clicked()
 		{
 			GetLastError();
 		}
-
 		qDebug() << m_hCursor;
-		
 	}
 }
