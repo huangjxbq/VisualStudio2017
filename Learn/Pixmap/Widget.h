@@ -10,6 +10,9 @@ class Widget : public QWidget
 public:
 	Widget(QWidget *parent = Q_NULLPTR);
 
+	void showPixmapSizeInfo(const QPixmap &pixmap);
+	void showPixmapColorInfo(const QPixmap &pixmap);
+
 private:
 	Ui::WidgetClass ui;
 };
