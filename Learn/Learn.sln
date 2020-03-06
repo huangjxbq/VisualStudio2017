@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "movie", "movie", "{6D67EE56
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Movie", "Movie\Movie.vcxproj", "{84845657-D191-4604-9AE5-2590205180DC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VersionAndBuildInfomation", "VersionAndBuildInfomation\VersionAndBuildInfomation.vcxproj", "{D9A29DE1-41D2-411A-8089-C196CFE65251}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -77,6 +79,14 @@ Global
 		{84845657-D191-4604-9AE5-2590205180DC}.Release|x64.ActiveCfg = Release|x64
 		{84845657-D191-4604-9AE5-2590205180DC}.Release|x64.Build.0 = Release|x64
 		{84845657-D191-4604-9AE5-2590205180DC}.Release|x86.ActiveCfg = Release|x64
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Debug|x64.ActiveCfg = Debug|x64
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Debug|x64.Build.0 = Debug|x64
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Debug|x86.ActiveCfg = Debug|Win32
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Debug|x86.Build.0 = Debug|Win32
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Release|x64.ActiveCfg = Release|x64
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Release|x64.Build.0 = Release|x64
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Release|x86.ActiveCfg = Release|Win32
+		{D9A29DE1-41D2-411A-8089-C196CFE65251}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,9 +100,10 @@ Global
 		{0016D13D-5934-4001-858C-4957246CC559} = {817A3347-5F6C-4815-B483-7A6EE3B79786}
 		{6D67EE56-C77E-4086-A282-E8B5630698F6} = {817A3347-5F6C-4815-B483-7A6EE3B79786}
 		{84845657-D191-4604-9AE5-2590205180DC} = {6D67EE56-C77E-4086-A282-E8B5630698F6}
+		{D9A29DE1-41D2-411A-8089-C196CFE65251} = {AE527B84-8786-430C-8F60-9CE7ABB0C365}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
 		Qt5Version = $(DefaultQtVersion)
+		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
 	EndGlobalSection
 EndGlobal
