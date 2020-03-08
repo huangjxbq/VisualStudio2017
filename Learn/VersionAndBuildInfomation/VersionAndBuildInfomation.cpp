@@ -37,12 +37,6 @@ void Version()
 	std::cout << "ITK_VERSION_STRING:" << ITK_VERSION_STRING << std::endl;
 }
 
-std::string getkey()
-{
-	return "sss";
-}
-
-
 void BuildInformation()
 {
 	using BuildInformationMapType = itk::BuildInformation::MapType;
@@ -53,13 +47,10 @@ void BuildInformation()
 
 	std::vector<MapKeyType> keys = itk::BuildInformation::GetAllKeys();
 
-	for (MapKeyType key : keys)
+
+	for (int i = 0; i < keys.size(); i++)
 	{
-		
-		itk::BuildInformation::GetValue(getkey());
-
-		itk::BuildInformation::GetDescription(key);
+		itk::BuildInformation::GetValue((keys.at(i)));
+		itk::BuildInformation::GetDescription(keys[i]);
 	}
-
-
 }
