@@ -9,7 +9,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(LOG4CPLUS_ROOT)\2.0.5\$(PlatformToolset)\$(Platform)\$(Configuration)\static\$(CharacterSet)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>log4cplusSU.lib;log4cplusqt5debugappenderSU.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>log4cplusSU.lib;log4cplusqt5debugappenderSU.lib;WS2_32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />
