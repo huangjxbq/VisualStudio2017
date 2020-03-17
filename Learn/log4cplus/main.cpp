@@ -1,6 +1,6 @@
 #include "Widget.h"
 #include <QtWidgets/QApplication>
-#include <log4cplus/initializer.h>
+#include <log4cplus/log4cplus.h>
 
 int main(int argc, char *argv[])
 {
