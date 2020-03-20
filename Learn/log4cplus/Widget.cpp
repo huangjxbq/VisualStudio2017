@@ -16,8 +16,6 @@ Widget::Widget(QWidget *parent)
 	//log4cplus::helpers::Time  log4c
 	//log4cplus::helpers::getFormattedTime("", );
 	
-
-
 	log4cplus::Logger root_logger = log4cplus::Logger::getRoot();
 
 	const log4cplus::tstring root_logger_name = root_logger.getName(); //Ãû³Æ
