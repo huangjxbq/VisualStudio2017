@@ -1,0 +1,9 @@
+LightObject (00000000002BD9E0)
+  RTTI typeinfo:   class itk::LightObject
+  Reference Count: 1
+LightObject (00000000002BDA80)
+  RTTI typeinfo:   class itk::LightObject
+  Reference Count: 1
+LightObject (00000000002BDAD0)
+  RTTI typeinfo:   class itk::LightObject
+  Reference Count: 1
