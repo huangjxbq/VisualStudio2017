@@ -1,13 +1,19 @@
 #include <QtCore/QCoreApplication>
 #include <itkMesh.h>
+#include <itkVertexCell.h>
 
 using Mesh2D = itk::Mesh<double, 2>;
 using Mesh3D = itk::Mesh<double, 3>;
+
 using Mesh2DPointer = Mesh2D::Pointer;
 using Mesh3DPointer = Mesh3D::Pointer;
 
 using Mesh2DPoint = Mesh2D::PointType;
 using Mesh3DPoint = Mesh3D::PointType;
+
+using Mesh2DCellTraits = Mesh2D::CellTraits;
+using Mesh2DCellInterface = Mesh2D::CellType;
+using Mesh2DVertexCellType = itk::VertexCell<Mesh2DCellInterface>;
 
 int main(int argc, char *argv[])
 {
@@ -34,10 +40,18 @@ int main(int argc, char *argv[])
 	mesh2d->SetPointData(1, 2.8);
 	mesh2d->SetPointData(2, 6.5);
 
-	mesh2d->Print(std::cout);
+	//mesh2d->Print(std::cout);
+
+
+	//mesh2d->GetBoundingBox()->Print(std::cout);
+
+
+
+	Mesh2DVertexCellType vertex;
+
+	std::cout << "VertexCell NumberOfPoints = " << vertex.GetNumberOfPoints() << std::endl;
+	std::cout << vertex.GetType() << std::endl;
 
 	//mesh
-
-
 	return a.exec();
 }
