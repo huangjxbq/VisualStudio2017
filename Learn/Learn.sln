@@ -65,6 +65,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-mesh", "itk-core-m
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "clipboard", "clipboard\clipboard.vcxproj", "{18AA0265-492E-45D2-9D25-8DFC8BF867B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Array", "Array", "{027F3ABF-0D13-4B7D-8EF8-DC3F71E99CA2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-array", "itk-core-common-array\itk-core-common-array.vcxproj", "{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -175,6 +179,14 @@ Global
 		{18AA0265-492E-45D2-9D25-8DFC8BF867B1}.Release|x64.ActiveCfg = Release|x64
 		{18AA0265-492E-45D2-9D25-8DFC8BF867B1}.Release|x64.Build.0 = Release|x64
 		{18AA0265-492E-45D2-9D25-8DFC8BF867B1}.Release|x86.ActiveCfg = Release|x64
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Debug|x64.ActiveCfg = Debug|x64
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Debug|x64.Build.0 = Debug|x64
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Debug|x86.ActiveCfg = Debug|Win32
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Debug|x86.Build.0 = Debug|Win32
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Release|x64.ActiveCfg = Release|x64
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Release|x64.Build.0 = Release|x64
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Release|x86.ActiveCfg = Release|Win32
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,9 +217,11 @@ Global
 		{25C7CD1D-317F-446C-ACD5-BC55D6C91498} = {1D611E56-93A8-4F23-8D6B-565E2616E06E}
 		{1FB958A0-215F-4345-85D9-32F4DD5E08B5} = {25C7CD1D-317F-446C-ACD5-BC55D6C91498}
 		{18AA0265-492E-45D2-9D25-8DFC8BF867B1} = {817A3347-5F6C-4815-B483-7A6EE3B79786}
+		{027F3ABF-0D13-4B7D-8EF8-DC3F71E99CA2} = {A4552F5E-00A2-419E-833F-49106B873B6E}
+		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C} = {027F3ABF-0D13-4B7D-8EF8-DC3F71E99CA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
 		Qt5Version = $(DefaultQtVersion)
+		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
 	EndGlobalSection
 EndGlobal
