@@ -71,6 +71,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-array", "it
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-fixedarray", "itk-core-common-fixedarray\itk-core-common-fixedarray.vcxproj", "{29856BC9-042B-416D-AF66-B3C22301172B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandLine", "CommandLine\CommandLine.vcxproj", "{27F8F1CD-BACF-4262-903B-0E6EB6526D06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -197,6 +199,12 @@ Global
 		{29856BC9-042B-416D-AF66-B3C22301172B}.Release|x64.Build.0 = Release|x64
 		{29856BC9-042B-416D-AF66-B3C22301172B}.Release|x86.ActiveCfg = Release|Win32
 		{29856BC9-042B-416D-AF66-B3C22301172B}.Release|x86.Build.0 = Release|Win32
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06}.Debug|x64.ActiveCfg = Debug|x64
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06}.Debug|x64.Build.0 = Debug|x64
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06}.Debug|x86.ActiveCfg = Debug|x64
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06}.Release|x64.ActiveCfg = Release|x64
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06}.Release|x64.Build.0 = Release|x64
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -230,6 +238,7 @@ Global
 		{027F3ABF-0D13-4B7D-8EF8-DC3F71E99CA2} = {A4552F5E-00A2-419E-833F-49106B873B6E}
 		{FCA72E96-75EC-4071-A375-E0AE1BF5D31C} = {027F3ABF-0D13-4B7D-8EF8-DC3F71E99CA2}
 		{29856BC9-042B-416D-AF66-B3C22301172B} = {027F3ABF-0D13-4B7D-8EF8-DC3F71E99CA2}
+		{27F8F1CD-BACF-4262-903B-0E6EB6526D06} = {F41A75A2-054D-4908-89A2-19E5714F3BCC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
