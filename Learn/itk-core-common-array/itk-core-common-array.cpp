@@ -2,6 +2,7 @@
 #include "Array.h"
 #include "OptimizerParameters.h"
 #include "ValarrayImageContainer.h"
+#include "Array2D.h"
 
 //1.Array
 
@@ -19,7 +20,9 @@ int main()
 
 	//OptimizerParametersTest();
 
-	ValarrayImageContainerTest();
+	//ValarrayImageContainerTest();
+
+	Array2DTest();
 
 	system("pause");
 }

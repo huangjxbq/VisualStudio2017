@@ -18,6 +18,9 @@
     <Filter Include="ValarrayImageContainer">
       <UniqueIdentifier>{4c21d660-9d0d-4a67-a1c6-3e3b8bf8e078}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Array2D">
+      <UniqueIdentifier>{3106f75b-463f-4b46-bac3-ddf517931be6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-array.cpp">
@@ -32,6 +35,9 @@
     <ClCompile Include="ValarrayImageContainer.cpp">
       <Filter>ValarrayImageContainer</Filter>
     </ClCompile>
+    <ClCompile Include="Array2D.cpp">
+      <Filter>Array2D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h">
@@ -42,6 +48,9 @@
     </ClInclude>
     <ClInclude Include="ValarrayImageContainer.h">
       <Filter>ValarrayImageContainer</Filter>
+    </ClInclude>
+    <ClInclude Include="Array2D.h">
+      <Filter>Array2D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
