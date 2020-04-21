@@ -13,10 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="FixedArray">
+      <UniqueIdentifier>{37e053d6-69a7-48e9-8641-2b92bcc87f51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Point">
+      <UniqueIdentifier>{5a316b6e-3998-481c-8067-dbdcece7a90d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vector">
+      <UniqueIdentifier>{f941a51d-b351-4983-bd1a-36238b64cf00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RGBPixel">
+      <UniqueIdentifier>{433bfb82-e2ff-4201-a1cd-cbe480175696}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-fixedarray.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="FixedArray.cpp">
+      <Filter>FixedArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Point</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Vector</Filter>
+    </ClCompile>
+    <ClCompile Include="RGBPixel.cpp">
+      <Filter>RGBPixel</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FixedArray.h">
+      <Filter>FixedArray</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Point</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Vector</Filter>
+    </ClInclude>
+    <ClInclude Include="RGBPixel.h">
+      <Filter>RGBPixel</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
