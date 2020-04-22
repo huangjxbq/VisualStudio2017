@@ -1,4 +1,3 @@
-#include "Point.h"
 #include <itkPoint.h>
 
 using DoublePoint2D = itk::Point<double, 2>;

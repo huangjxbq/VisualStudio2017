@@ -1,4 +1,3 @@
-#include "FixedArray.h"
 #include <itkFixedArray.h>
 
 using DoubleFixedArray2D = itk::FixedArray<double, 2>;

@@ -160,16 +160,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DiffusionTensor3D.cpp" />
     <ClCompile Include="FixedArray.cpp" />
     <ClCompile Include="itk-core-common-fixedarray.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RGBPixel.cpp" />
+    <ClCompile Include="SymmetricSecondRankTensor.cpp" />
     <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DiffusionTensor3D.h" />
     <ClInclude Include="FixedArray.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="RGBPixel.h" />
+    <ClInclude Include="SymmetricSecondRankTensor.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

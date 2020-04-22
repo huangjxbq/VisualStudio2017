@@ -25,6 +25,12 @@
     <Filter Include="RGBPixel">
       <UniqueIdentifier>{433bfb82-e2ff-4201-a1cd-cbe480175696}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SymmetricSecondRankTensor">
+      <UniqueIdentifier>{0341bad5-7358-418f-94e6-2b35f78bb2a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DiffusionTensor3D">
+      <UniqueIdentifier>{c1521968-abe9-4c54-b1ac-d5b6c2a5197b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-fixedarray.cpp">
@@ -42,6 +48,12 @@
     <ClCompile Include="RGBPixel.cpp">
       <Filter>RGBPixel</Filter>
     </ClCompile>
+    <ClCompile Include="SymmetricSecondRankTensor.cpp">
+      <Filter>SymmetricSecondRankTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="DiffusionTensor3D.cpp">
+      <Filter>DiffusionTensor3D</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FixedArray.h">
@@ -55,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="RGBPixel.h">
       <Filter>RGBPixel</Filter>
+    </ClInclude>
+    <ClInclude Include="SymmetricSecondRankTensor.h">
+      <Filter>SymmetricSecondRankTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="DiffusionTensor3D.h">
+      <Filter>DiffusionTensor3D</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

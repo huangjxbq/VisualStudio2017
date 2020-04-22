@@ -1,4 +1,3 @@
-#include "Vector.h"
 #include <itkVector.h>
 
 using DoubleVector2D = itk::Vector<double, 2>;

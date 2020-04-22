@@ -1,5 +1,2 @@
 #pragma once
-
-
-
 void RGBPixelTest();

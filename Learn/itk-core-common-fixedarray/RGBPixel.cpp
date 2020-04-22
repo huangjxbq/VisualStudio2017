@@ -1,4 +1,3 @@
-#include "RGBPixel.h"
 #include <itkRGBPixel.h>
 
 using DefaultRGBPixelType = itk::RGBPixel<>;
