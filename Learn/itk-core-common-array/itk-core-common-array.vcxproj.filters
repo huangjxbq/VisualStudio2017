@@ -21,6 +21,9 @@
     <Filter Include="Array2D">
       <UniqueIdentifier>{3106f75b-463f-4b46-bac3-ddf517931be6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="VariableLengthVector">
+      <UniqueIdentifier>{5531408e-5625-4829-825d-d801fb69eed6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-array.cpp">
@@ -38,6 +41,9 @@
     <ClCompile Include="Array2D.cpp">
       <Filter>Array2D</Filter>
     </ClCompile>
+    <ClCompile Include="VariableLengthVector.cpp">
+      <Filter>VariableLengthVector</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h">
@@ -51,6 +57,9 @@
     </ClInclude>
     <ClInclude Include="Array2D.h">
       <Filter>Array2D</Filter>
+    </ClInclude>
+    <ClInclude Include="VariableLengthVector.h">
+      <Filter>VariableLengthVector</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

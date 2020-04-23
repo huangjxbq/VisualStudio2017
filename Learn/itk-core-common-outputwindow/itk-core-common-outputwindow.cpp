@@ -1,6 +1,5 @@
 ﻿#include "OutputWindow.h"
 
-
 //1.OutputWindow                      基类
 
 //2.TextOutput                     输出到std::cout

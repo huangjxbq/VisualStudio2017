@@ -1,5 +1,0 @@
-adsg 
-debug
-error
-warning
-genericoutput

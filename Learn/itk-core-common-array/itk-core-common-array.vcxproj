@@ -164,12 +164,14 @@
     <ClCompile Include="itk-core-common-array.cpp" />
     <ClCompile Include="OptimizerParameters.cpp" />
     <ClCompile Include="ValarrayImageContainer.cpp" />
+    <ClCompile Include="VariableLengthVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="Array2D.h" />
     <ClInclude Include="OptimizerParameters.h" />
     <ClInclude Include="ValarrayImageContainer.h" />
+    <ClInclude Include="VariableLengthVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
