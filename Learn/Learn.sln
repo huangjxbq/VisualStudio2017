@@ -81,6 +81,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Time", "Time", "{FA4D1B2B-6
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-time", "itk-core-common-time\itk-core-common-time.vcxproj", "{9805156D-653F-4616-A726-A6906AC6878C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OutputWindow", "OutputWindow", "{F3808D9B-6DE3-4CA0-A716-52B721EB50AF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-outputwindow", "itk-core-common-outputwindow\itk-core-common-outputwindow.vcxproj", "{2605752E-F8C5-413C-8485-7618B140800E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -229,6 +233,14 @@ Global
 		{9805156D-653F-4616-A726-A6906AC6878C}.Release|x64.Build.0 = Release|x64
 		{9805156D-653F-4616-A726-A6906AC6878C}.Release|x86.ActiveCfg = Release|Win32
 		{9805156D-653F-4616-A726-A6906AC6878C}.Release|x86.Build.0 = Release|Win32
+		{2605752E-F8C5-413C-8485-7618B140800E}.Debug|x64.ActiveCfg = Debug|x64
+		{2605752E-F8C5-413C-8485-7618B140800E}.Debug|x64.Build.0 = Debug|x64
+		{2605752E-F8C5-413C-8485-7618B140800E}.Debug|x86.ActiveCfg = Debug|Win32
+		{2605752E-F8C5-413C-8485-7618B140800E}.Debug|x86.Build.0 = Debug|Win32
+		{2605752E-F8C5-413C-8485-7618B140800E}.Release|x64.ActiveCfg = Release|x64
+		{2605752E-F8C5-413C-8485-7618B140800E}.Release|x64.Build.0 = Release|x64
+		{2605752E-F8C5-413C-8485-7618B140800E}.Release|x86.ActiveCfg = Release|Win32
+		{2605752E-F8C5-413C-8485-7618B140800E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -267,9 +279,11 @@ Global
 		{9D1E9860-4B1D-4B65-A7C5-A86CD7C684E4} = {19F1EF1C-C253-40F4-9005-F0B1EB76DDB4}
 		{FA4D1B2B-65FB-49E8-9E44-F1DA5D372B0A} = {A4552F5E-00A2-419E-833F-49106B873B6E}
 		{9805156D-653F-4616-A726-A6906AC6878C} = {FA4D1B2B-65FB-49E8-9E44-F1DA5D372B0A}
+		{F3808D9B-6DE3-4CA0-A716-52B721EB50AF} = {A4552F5E-00A2-419E-833F-49106B873B6E}
+		{2605752E-F8C5-413C-8485-7618B140800E} = {F3808D9B-6DE3-4CA0-A716-52B721EB50AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
 		Qt5Version = $(DefaultQtVersion)
+		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
 	EndGlobalSection
 EndGlobal
