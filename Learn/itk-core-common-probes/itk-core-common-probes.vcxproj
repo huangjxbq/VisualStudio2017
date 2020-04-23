@@ -160,6 +160,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-probes.cpp" />
+    <ClCompile Include="MemoryProbe.cpp" />
+    <ClCompile Include="MemoryProbesCollectorBase.cpp" />
+    <ClCompile Include="TimeProbe.cpp" />
+    <ClCompile Include="TimeProbesCollectorBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MemoryProbe.h" />
+    <ClInclude Include="MemoryProbesCollectorBase.h" />
+    <ClInclude Include="TimeProbe.h" />
+    <ClInclude Include="TimeProbesCollectorBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

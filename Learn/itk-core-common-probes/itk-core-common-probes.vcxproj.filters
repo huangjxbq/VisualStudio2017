@@ -13,10 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="TimeProbe">
+      <UniqueIdentifier>{4b2fac63-7b2c-4d9b-bea2-8fe3835f3631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemoryProbe">
+      <UniqueIdentifier>{289b9933-2194-4740-8826-2563edc4a76d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-probes.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TimeProbe.cpp">
+      <Filter>TimeProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeProbesCollectorBase.cpp">
+      <Filter>TimeProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryProbe.cpp">
+      <Filter>MemoryProbe</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryProbesCollectorBase.cpp">
+      <Filter>MemoryProbe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TimeProbe.h">
+      <Filter>TimeProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeProbesCollectorBase.h">
+      <Filter>TimeProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryProbe.h">
+      <Filter>MemoryProbe</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryProbesCollectorBase.h">
+      <Filter>MemoryProbe</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
