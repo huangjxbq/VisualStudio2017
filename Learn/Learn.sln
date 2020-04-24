@@ -85,6 +85,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OutputWindow", "OutputWindo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-outputwindow", "itk-core-common-outputwindow\itk-core-common-outputwindow.vcxproj", "{2605752E-F8C5-413C-8485-7618B140800E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Widget", "Widget", "{EF950E59-4F0E-43BE-83D0-AC806C5E552D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -281,6 +283,7 @@ Global
 		{9805156D-653F-4616-A726-A6906AC6878C} = {FA4D1B2B-65FB-49E8-9E44-F1DA5D372B0A}
 		{F3808D9B-6DE3-4CA0-A716-52B721EB50AF} = {A4552F5E-00A2-419E-833F-49106B873B6E}
 		{2605752E-F8C5-413C-8485-7618B140800E} = {F3808D9B-6DE3-4CA0-A716-52B721EB50AF}
+		{EF950E59-4F0E-43BE-83D0-AC806C5E552D} = {EE87C0F5-59A7-40EC-A874-FA0F3F29D9A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		Qt5Version = $(DefaultQtVersion)
