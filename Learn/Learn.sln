@@ -99,6 +99,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-bresenhamli
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-random", "itk-core-common-random\itk-core-common-random.vcxproj", "{B4DDE07D-CEFB-4224-A748-835F90D4712F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Log", "Log", "{782F9308-0386-4649-9264-BFA748FA6E88}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-log", "itk-core-common-log\itk-core-common-log.vcxproj", "{BF471349-67FD-4416-BDF5-71591F0268F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -287,6 +291,12 @@ Global
 		{B4DDE07D-CEFB-4224-A748-835F90D4712F}.Release|x64.Build.0 = Release|x64
 		{B4DDE07D-CEFB-4224-A748-835F90D4712F}.Release|x86.ActiveCfg = Release|Win32
 		{B4DDE07D-CEFB-4224-A748-835F90D4712F}.Release|x86.Build.0 = Release|Win32
+		{BF471349-67FD-4416-BDF5-71591F0268F3}.Debug|x64.ActiveCfg = Debug|x64
+		{BF471349-67FD-4416-BDF5-71591F0268F3}.Debug|x64.Build.0 = Debug|x64
+		{BF471349-67FD-4416-BDF5-71591F0268F3}.Debug|x86.ActiveCfg = Debug|x64
+		{BF471349-67FD-4416-BDF5-71591F0268F3}.Release|x64.ActiveCfg = Release|x64
+		{BF471349-67FD-4416-BDF5-71591F0268F3}.Release|x64.Build.0 = Release|x64
+		{BF471349-67FD-4416-BDF5-71591F0268F3}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -334,9 +344,11 @@ Global
 		{2185791A-0C87-49C0-9350-E3F3242F4570} = {2406F833-42CF-4E1D-B57D-691DC9D74B71}
 		{585565A5-E73D-45AA-BC2F-7B9822379802} = {2406F833-42CF-4E1D-B57D-691DC9D74B71}
 		{B4DDE07D-CEFB-4224-A748-835F90D4712F} = {2406F833-42CF-4E1D-B57D-691DC9D74B71}
+		{782F9308-0386-4649-9264-BFA748FA6E88} = {A4552F5E-00A2-419E-833F-49106B873B6E}
+		{BF471349-67FD-4416-BDF5-71591F0268F3} = {782F9308-0386-4649-9264-BFA748FA6E88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		Qt5Version = $(DefaultQtVersion)
 		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
+		Qt5Version = $(DefaultQtVersion)
 	EndGlobalSection
 EndGlobal
