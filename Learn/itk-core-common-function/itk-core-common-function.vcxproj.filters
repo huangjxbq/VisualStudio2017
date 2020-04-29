@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="阶跃函数">
+      <UniqueIdentifier>{0a388e91-f363-421f-a2a9-060ec5ba39ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="阶跃函数\RegularizedHeavisideStepFunction">
+      <UniqueIdentifier>{cc8a4b2f-3531-48e4-9bbf-583ecb26a6de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="阶跃函数\HeavisideStepFunction">
+      <UniqueIdentifier>{6134fdd4-d96a-44ef-afce-44a359d0e727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="空间函数">
+      <UniqueIdentifier>{8d734a92-f894-47af-9eb3-2a5facf805c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="空间函数\InteriorExteriorSpatialFunction">
+      <UniqueIdentifier>{9e271e4e-e50d-4e72-8210-ffba34d14f7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="空间函数\其他">
+      <UniqueIdentifier>{2cf29531-a2f8-4cbf-b993-abe59cfc48a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KernelFunctionBase">
+      <UniqueIdentifier>{c328f2f0-b8b0-4e28-babf-5548f72f56de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="itk-core-common-function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HeavisideStepFunction.cpp">
+      <Filter>阶跃函数\HeavisideStepFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="SinRegularizedHeavisideStepFunction.cpp">
+      <Filter>阶跃函数\RegularizedHeavisideStepFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AtanRegularizedHeavisideStepFunction.cpp">
+      <Filter>阶跃函数\RegularizedHeavisideStepFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="ConicShellInteriorExteriorSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="EllipsoidInteriorExteriorSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="FiniteCylinderSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="FrustumSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="SymmetricEllipsoidInteriorExteriorSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="TorusInteriorExteriorSpatialFunction.cpp">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="GaussianSpatialFunction.cpp">
+      <Filter>空间函数\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="GaussianDerivativeSpatialFunction.cpp">
+      <Filter>空间函数\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryThresholdSpatialFunction.cpp">
+      <Filter>空间函数\其他</Filter>
+    </ClCompile>
+    <ClCompile Include="GaussianKernelFunction.cpp">
+      <Filter>KernelFunctionBase</Filter>
+    </ClCompile>
+    <ClCompile Include="BSplineKernelFunction.cpp">
+      <Filter>KernelFunctionBase</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HeavisideStepFunction.h">
+      <Filter>阶跃函数\HeavisideStepFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="SinRegularizedHeavisideStepFunction.h">
+      <Filter>阶跃函数\RegularizedHeavisideStepFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AtanRegularizedHeavisideStepFunction.h">
+      <Filter>阶跃函数\RegularizedHeavisideStepFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="TorusInteriorExteriorSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="ConicShellInteriorExteriorSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="EllipsoidInteriorExteriorSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteCylinderSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="FrustumSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="SymmetricEllipsoidInteriorExteriorSpatialFunction.h">
+      <Filter>空间函数\InteriorExteriorSpatialFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussianSpatialFunction.h">
+      <Filter>空间函数\其他</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussianDerivativeSpatialFunction.h">
+      <Filter>空间函数\其他</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryThresholdSpatialFunction.h">
+      <Filter>空间函数\其他</Filter>
+    </ClInclude>
+    <ClInclude Include="GaussianKernelFunction.h">
+      <Filter>KernelFunctionBase</Filter>
+    </ClInclude>
+    <ClInclude Include="BSplineKernelFunction.h">
+      <Filter>KernelFunctionBase</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
