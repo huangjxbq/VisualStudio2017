@@ -107,6 +107,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Function", "Function", "{5C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-function", "itk-core-common-function\itk-core-common-function.vcxproj", "{9D341A1D-6778-4EA3-A148-D0E44280182D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OperatingSystem", "OperatingSystem", "{EABDE6D0-94EF-43E2-9FA0-0691606DDBCC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itk-core-common-operatingsystem", "itk-core-common-operatingsystem\itk-core-common-operatingsystem.vcxproj", "{6A892F38-2D23-404B-A728-E898DFA2C5C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -309,6 +313,14 @@ Global
 		{9D341A1D-6778-4EA3-A148-D0E44280182D}.Release|x64.Build.0 = Release|x64
 		{9D341A1D-6778-4EA3-A148-D0E44280182D}.Release|x86.ActiveCfg = Release|Win32
 		{9D341A1D-6778-4EA3-A148-D0E44280182D}.Release|x86.Build.0 = Release|Win32
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Debug|x64.ActiveCfg = Debug|x64
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Debug|x64.Build.0 = Debug|x64
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Debug|x86.ActiveCfg = Debug|Win32
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Debug|x86.Build.0 = Debug|Win32
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Release|x64.ActiveCfg = Release|x64
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Release|x64.Build.0 = Release|x64
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Release|x86.ActiveCfg = Release|Win32
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -360,9 +372,11 @@ Global
 		{BF471349-67FD-4416-BDF5-71591F0268F3} = {782F9308-0386-4649-9264-BFA748FA6E88}
 		{5C2E84BF-80E5-479D-95CB-9A7FE4E154E6} = {A4552F5E-00A2-419E-833F-49106B873B6E}
 		{9D341A1D-6778-4EA3-A148-D0E44280182D} = {5C2E84BF-80E5-479D-95CB-9A7FE4E154E6}
+		{EABDE6D0-94EF-43E2-9FA0-0691606DDBCC} = {A4552F5E-00A2-419E-833F-49106B873B6E}
+		{6A892F38-2D23-404B-A728-E898DFA2C5C3} = {EABDE6D0-94EF-43E2-9FA0-0691606DDBCC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		Qt5Version = $(DefaultQtVersion)
 		SolutionGuid = {CA1A7854-ADDF-445F-A133-BF0BC4B2DCFC}
+		Qt5Version = $(DefaultQtVersion)
 	EndGlobalSection
 EndGlobal
