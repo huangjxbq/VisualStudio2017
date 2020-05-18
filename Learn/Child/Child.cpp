@@ -21,10 +21,8 @@ Child::Child(QWidget *parent)
 		ui.textEdit->append(u8"获取环境变量成功");
 		ui.textEdit->append(QString("DN:") + ev);
 
-		HANDLE file = (HANDLE)636;
-
-		DWORD number = 6;
-		BOOL res = WriteFile(file, "Child!", number, &number, NULL);
+		DWORD number = 7;
+		BOOL res = WriteFile((HANDLE)ev.toInt(), "Child!\n", number, &number, NULL);
 		if (FALSE == res)
 		{
 			ui.textEdit->append(u8"写文件失败");
@@ -34,7 +32,7 @@ Child::Child(QWidget *parent)
 			ui.textEdit->append(u8"写文件成功");
 		}
 
-		CloseHandle(file);
+		CloseHandle((HANDLE)ev.toInt());
 	}
 	else
 	{

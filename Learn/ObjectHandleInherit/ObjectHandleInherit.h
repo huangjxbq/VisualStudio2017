@@ -21,5 +21,5 @@ private:
 	Ui::ObjectHandleInheritClass ui;
 
 
-	
+	HANDLE m_hFile;
 };
