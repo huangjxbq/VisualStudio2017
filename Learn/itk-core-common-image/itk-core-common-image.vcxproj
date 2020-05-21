@@ -160,14 +160,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ImageBase.cpp" />
+    <ClCompile Include="ImageRandomIterator.cpp" />
     <ClCompile Include="ImageRegion.cpp" />
     <ClCompile Include="ImageRegionIterator.cpp" />
+    <ClCompile Include="ImageScanlineIterator.cpp" />
+    <ClCompile Include="ImageSliceIterator.cpp" />
     <ClCompile Include="itk-core-common-image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageBase.h" />
+    <ClInclude Include="ImageRandomIterator.h" />
     <ClInclude Include="ImageRegion.h" />
     <ClInclude Include="ImageRegionIterator.h" />
+    <ClInclude Include="ImageScanlineIterator.h" />
+    <ClInclude Include="ImageSliceIterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

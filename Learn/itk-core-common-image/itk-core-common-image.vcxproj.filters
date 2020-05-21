@@ -25,6 +25,15 @@
     <Filter Include="迭代器\区域迭代器">
       <UniqueIdentifier>{50639274-45b3-47d4-beff-cd1450128007}</UniqueIdentifier>
     </Filter>
+    <Filter Include="迭代器\随机迭代器">
+      <UniqueIdentifier>{5d08279a-f418-4680-a599-a28b2dc0bee6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="迭代器\切片迭代器">
+      <UniqueIdentifier>{3b7bfcd8-9805-4140-87ea-ada153d1f9ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="迭代器\线迭代器">
+      <UniqueIdentifier>{1892e452-bd51-4295-a7c2-6093d3c97b1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-image.cpp">
@@ -39,6 +48,15 @@
     <ClCompile Include="ImageRegionIterator.cpp">
       <Filter>迭代器\区域迭代器</Filter>
     </ClCompile>
+    <ClCompile Include="ImageRandomIterator.cpp">
+      <Filter>迭代器\随机迭代器</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSliceIterator.cpp">
+      <Filter>迭代器\切片迭代器</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageScanlineIterator.cpp">
+      <Filter>迭代器\线迭代器</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageBase.h">
@@ -49,6 +67,15 @@
     </ClInclude>
     <ClInclude Include="ImageRegionIterator.h">
       <Filter>迭代器\区域迭代器</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageRandomIterator.h">
+      <Filter>迭代器\随机迭代器</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageSliceIterator.h">
+      <Filter>迭代器\切片迭代器</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageScanlineIterator.h">
+      <Filter>迭代器\线迭代器</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
