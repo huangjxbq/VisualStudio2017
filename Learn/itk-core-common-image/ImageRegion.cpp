@@ -1,4 +1,7 @@
 #include <itkImageRegion.h>
+#include <itkImageRegionSplitterDirection.h>
+#include <itkImageRegionSplitterMultidimensional.h>
+#include <itkImageRegionSplitterSlowDimension.h>
 
 void ImageRegionTest()
 {
@@ -14,6 +17,7 @@ void ImageRegionTest()
 	region.SetIndex(1, 0);
 	region.SetSize(0, 2);
 	region.SetSize(1, 3);
+
 
 	//设置region
 	region.SetIndex(0, 1);
@@ -67,5 +71,32 @@ void ImageRegionTest()
 
 	//收缩区域
 
+
+}
+
+
+using ImageRegionSplitterType = itk::ImageRegionSplitterDirection;
+//using ImageRegionSplitterType = itk::ImageRegionSplitterMultidimensional;
+//using ImageRegionSplitterType = itk::ImageRegionSplitterSlowDimension;
+
+void ImageRegionSplitterTest()
+{
+	using ImageRegionType = itk::ImageRegion<2>;
+
+	//设置region
+	ImageRegionType region;
+	region.SetIndex(0, 0);
+	region.SetIndex(1, 0);
+	region.SetSize(0, 5);
+	region.SetSize(1, 5);
+
+	ImageRegionSplitterType::Pointer regionsplitter = ImageRegionSplitterType::New();
+	
+	std::cout << "GetNumberOfSplits:" << regionsplitter->GetNumberOfSplits(region, 10) << std::endl;
+
+	ImageRegionType region2;
+	int available = regionsplitter->GetSplit(1, regionsplitter->GetNumberOfSplits(region, 10), region2);
+
+	region2.Print(std::cout);
 
 }

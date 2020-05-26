@@ -5,6 +5,7 @@
 #include "ImageRegionIterator.h"
 #include "ImageRandomIterator.h"
 #include "ImageSliceIterator.h"
+#include "ImageScanlineIterator.h"
 
 //1.ImageConstIterator
 //|
@@ -15,8 +16,8 @@
 //|--4.ImageIterator
 //|
 //|--5.ImageScanlineConstIterator
-//   |
-//   |--6.ImageScanlineIterator
+//|  |
+//|  |--6.ImageScanlineIterator
 
 //1.ImageConstIteratorWithIndex
 //|
@@ -39,8 +40,12 @@
 //|  |--10.ImageRandomNonRepeatingIteratorWithIndex
 //|
 //|--11.ImageSliceConstIteratorWithIndex
+//|  |
+//|  |--12.ImageSliceIteratorWithIndex
+//|
+//|--13.ImageLinearConstIteratorWithIndex
 //   |
-//   |--12.ImageSliceIteratorWithIndex
+//   |--14.ImageLinearIteratorWithIndex
 
 //1.ImageConstIteratorWithOnlyIndex
 //|
@@ -56,6 +61,11 @@
 //   |
 //   |--4.ImageReverseIterator
 
+//1.LineConstIterator
+//|
+//|--2.LineIterator
+
+
 int main()
 {
 	//ImageBaseTest();
@@ -63,6 +73,11 @@ int main()
 	//ImageTest();
 
 	//ImageRegionTest();
+
+	//区域分割
+	ImageRegionSplitterTest();
+
+	
 
 	//ImageRegionConstIteratorTest();
 
@@ -83,6 +98,9 @@ int main()
 
 	//切片迭代器
 	//ImageSliceConstIteratorWithIndexTest();
+
+
+	//ImageScanlineIteratorTest();
 
 	system("pause");
 }
