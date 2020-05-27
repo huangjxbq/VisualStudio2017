@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ImageBase">
-      <UniqueIdentifier>{cc89560e-e56b-4ff3-a224-b7851d3a373c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="图像相关概念">
       <UniqueIdentifier>{bbbff4ef-767e-4cb4-b7a0-4f00fc6e54bd}</UniqueIdentifier>
     </Filter>
@@ -34,13 +31,19 @@
     <Filter Include="迭代器\线迭代器">
       <UniqueIdentifier>{1892e452-bd51-4295-a7c2-6093d3c97b1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="图像">
+      <UniqueIdentifier>{cc89560e-e56b-4ff3-a224-b7851d3a373c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="图像操作">
+      <UniqueIdentifier>{eaf2191b-2024-417b-bc3a-95cb529b9238}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="itk-core-common-image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ImageBase.cpp">
-      <Filter>ImageBase</Filter>
+      <Filter>图像</Filter>
     </ClCompile>
     <ClCompile Include="ImageRegion.cpp">
       <Filter>图像相关概念</Filter>
@@ -57,10 +60,13 @@
     <ClCompile Include="ImageScanlineIterator.cpp">
       <Filter>迭代器\线迭代器</Filter>
     </ClCompile>
+    <ClCompile Include="ImageOperate.cpp">
+      <Filter>图像操作</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageBase.h">
-      <Filter>ImageBase</Filter>
+      <Filter>图像</Filter>
     </ClInclude>
     <ClInclude Include="ImageRegion.h">
       <Filter>图像相关概念</Filter>
@@ -76,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="ImageScanlineIterator.h">
       <Filter>迭代器\线迭代器</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageOperate.h">
+      <Filter>图像操作</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

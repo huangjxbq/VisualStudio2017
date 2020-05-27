@@ -7,6 +7,8 @@
 #include "ImageSliceIterator.h"
 #include "ImageScanlineIterator.h"
 
+#include "ImageOperate.h"
+
 //1.ImageConstIterator
 //|
 //|--2.ImageRegionConstIterator
@@ -75,7 +77,7 @@ int main()
 	//ImageRegionTest();
 
 	//区域分割
-	ImageRegionSplitterTest();
+	//ImageRegionSplitterTest();
 
 	
 
@@ -101,6 +103,14 @@ int main()
 
 
 	//ImageScanlineIteratorTest();
+
+
+	//图像操作
+	//ImageCopyRegion();
+
+	//ImageDuplicator();
+
+	ImageEnlargeRegionOverBox();
 
 	system("pause");
 }

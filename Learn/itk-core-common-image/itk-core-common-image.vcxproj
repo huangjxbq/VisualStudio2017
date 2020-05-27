@@ -160,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ImageBase.cpp" />
+    <ClCompile Include="ImageOperate.cpp" />
     <ClCompile Include="ImageRandomIterator.cpp" />
     <ClCompile Include="ImageRegion.cpp" />
     <ClCompile Include="ImageRegionIterator.cpp" />
@@ -169,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageBase.h" />
+    <ClInclude Include="ImageOperate.h" />
     <ClInclude Include="ImageRandomIterator.h" />
     <ClInclude Include="ImageRegion.h" />
     <ClInclude Include="ImageRegionIterator.h" />
