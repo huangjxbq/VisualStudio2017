@@ -9,6 +9,9 @@
 
 #include "ImageOperate.h"
 
+//图像相关概念
+#include "ImageIndex.h"
+
 //1.ImageConstIterator
 //|
 //|--2.ImageRegionConstIterator
@@ -110,7 +113,12 @@ int main()
 
 	//ImageDuplicator();
 
-	ImageEnlargeRegionOverBox();
+	//ImageEnlargeRegionOverBox();
+
+
+	//==========图像相关概念==========
+	ImageIndex();
+
 
 	system("pause");
 }
